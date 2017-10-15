@@ -1,0 +1,48 @@
+package 学生;
+
+public class Student {
+	
+	public static class Student1{
+	String name;
+	int age;
+	String education;
+	public Student1(String name,int age,String education) {
+		this.name=name;
+		this.age=age;
+		this.education=education;
+	}
+	void show() {
+		System.out.println("姓名："+name+"\t年龄："+age+"\t学历："+education);
+	}
+}
+static class Undergraduate extends Student1 {
+	String specialty;
+	public Undergraduate(String name1,int age1,String education1,String specialty) {
+		super(name1,age1,education1);
+		this.specialty=specialty;
+	}
+	void show() {
+		super.show();
+		System.out.println("专业："+specialty);
+	}
+}
+static class Graduate extends Student1{
+	String direction;
+	public Graduate(String name1,int age1,String education1,String direction) {
+		super(name1,age1,education1);
+		this.direction=direction;
+	}
+	void show() {
+		super.show();
+		System.out.println("研究方向："+direction);
+	}
+}
+public static void main(String[] args) {
+	Student1 a=new Student1("张三",18,"本科");
+	a.show();
+	Undergraduate b=new Undergraduate("李四",20,"本科","软件工程");
+	b.show();
+	Graduate c=new Graduate("赵五",22,"研究生","前端开发");
+	c.show();
+}
+}
