@@ -1,0 +1,47 @@
+package 接口作业1;
+
+interface ComputeWeight {
+	public double computeWeight();
+}
+class Television implements ComputeWeight{
+	double weight;
+	Television(double weight){
+		this.weight=weight;
+	}
+	public double computeWeight() {
+		return(weight);
+	}
+}
+class Computer implements ComputeWeight{
+	double weight;
+	Computer(double weight){
+		this.weight=weight;
+	}
+	public double computeWeight() {
+		return(weight);
+	}
+}
+class WashMachine implements ComputeWeight{
+	double weight;
+	WashMachine(double weight){
+		this.weight=weight;
+	}
+	public double computeWeight() {
+		return(weight);
+	}
+}
+
+public class Car {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ComputeWeight[] style =new ComputeWeight[3];
+		style[0] = new Television(10);
+		style[1] = new Computer(20);
+		style[2] = new WashMachine(30);
+		double sumweight;
+		sumweight=style[0].computeWeight()+style[1].computeWeight()+style[2].computeWeight();
+		System.out.println("货物总重量为："+sumweight);
+	}
+
+}
