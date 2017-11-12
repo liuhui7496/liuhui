@@ -1,0 +1,72 @@
+package 接口作业2;
+
+public interface StudentManageInterface {
+	public  void setFee(double fee) ;
+	public double getFee();
+}
+package 接口作业2;
+
+public interface TeacherManageInterface {
+	public void setPay(double pay);
+	public double getPay();
+}
+package 接口作业2;
+
+public class Graduate implements StudentManageInterface,TeacherManageInterface {
+	public String name,sex;
+	public double age,fee,pay;	
+	
+	public void setFee(double fee) {
+		this.fee=fee;
+	}
+	public double getFee() {
+		return this.fee;
+	}
+	public void setPay(double pay) {
+		this.pay=pay;
+	}
+	public double getPay() {
+		return this.pay;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name=name;
+	}
+	 Graduate(String name,double fee,double pay) {
+		 this.name=name;
+		 this.fee=fee;
+		 this.pay=pay;
+		 double sumfee;
+		 double sumpay;
+		 sumfee=this.fee*12;//一package 接口作业2;
+
+public class Text {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Graduate zhangsan =new Graduate("zhangsan",1000,5000);
+	}
+
+}
+年的工资
+		 sumpay=this.pay*2;//一年的学费
+		 if((sumfee-sumpay)<2000){
+			 System.out.println("provide a loan");
+		 }
+		 else {
+			 System.out.println("dont need");
+		 }
+	 }
+}
+package 接口作业2;
+
+public class Text {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Graduate zhangsan =new Graduate("zhangsan",1000,5000);
+	}
+
+}
